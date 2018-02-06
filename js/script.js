@@ -17,30 +17,33 @@
 
 // Songs
 var mySong = {
-	"title":"24K Magic",
-	"artist":"Bruno Mars",
-	"mp3-url":"https://open.spotify.com/track/6b8Be6ljOzmkOmFslEb23P",
-	"image-url":"https://images-na.ssl-images-amazon.com/images/I/71Gr9aCHQfL._SY355_.jpg",
+	"title":"Baby",
+	"artist":"Justin Bieber",
+	"mp3URL":"https://www.youtube.com/watch?v=kffacxfA7G4",
+	"imageURL":"https://vignette.wikia.nocookie.net/justin-bieber/images/4/41/Thumbnail.jpg/revision/latest?cb=20120506173934",
 }
+
+
+console.log(mySong)
 
 var myPlayList = [
 	{
-		"title":"24K Magic",
-		"artist":"Bruno Mars",
-		"mp3-url":"https://open.spotify.com/track/6b8Be6ljOzmkOmFslEb23P",
-		"image-url":"https://images-na.ssl-images-amazon.com/images/I/71Gr9aCHQfL._SY355_.jpg",
+		"title":"Never Say Never",
+		"artist":"Justin Beiber",
+		"mp3URL":"https://www.youtube.com/watch?v=_Z5-P9v3F8w",
+		"imageURL":"https://vignette.wikia.nocookie.net/justin-bieber/images/4/41/Thumbnail.jpg/revision/latest?cb=20120506173934",
 	},
 	{
-		"title":"Sir Duke",
-		"artist":"Stevie Wonder",
-		"mp3-url":"https://open.spotify.com/track/2udw7RDkldLFIPG9WYdVtT",
-		"image-url":"https://upload.wikimedia.org/wikipedia/en/thumb/e/e2/Songs_in_the_key_of_life.jpg/220px-Songs_in_the_key_of_life.jpg",
+		"title":"One Time",
+		"artist":"Justin Beiber",
+		"mp3URL":"https://www.youtube.com/watch?v=8PTukbWkuZw",
+		"imageURL":"https://vignette.wikia.nocookie.net/justin-bieber/images/4/41/Thumbnail.jpg/revision/latest?cb=20120506173934",
 	},
 	{
-		"title":"Sorry",
-		"artist":"Justin Bieber",
-		"mp3-url":"https://open.spotify.com/track/09CtPGIpYB4BrO8qb1RGsF",
-		"image-url":"http://assets-s3.usmagazine.com/uploads/assets/articles/93827-justin-biebers-sorry-choreographer-spills-video-style-secrets-parris-goebel/1445638548_justin-bieber-sorry-dancers-zoom.jpg",
+		"title":"Baby",
+	"artist":"Justin Bieber",
+	"mp3URL":"https://www.youtube.com/watch?v=kffacxfA7G4",
+	"imageURL":"https://vignette.wikia.nocookie.net/justin-bieber/images/4/41/Thumbnail.jpg/revision/latest?cb=20120506173934",
 	}
 
 ]
@@ -49,6 +52,7 @@ var myPlayList = [
 
 // DOCUMENT READY FUNCTION
 $( document ).ready(function() {
+	displayList();
   
 
 
@@ -56,9 +60,25 @@ $( document ).ready(function() {
 });
 
 function displayList(){
+$('body').append("<p>Title: " + mySong.title+ "</p>");
+$('body').append("<p>Artist: " + mySong.artist + "</p>");
+$('body').append( "<a href=" + mySong.mp3URL+">Play </a>");
+$('body').append( "<img src=" + mySong.imageURL +">");
 
+$('body').append( myPlayList[0].title);
+$('body').append( myPlayList[0].artist);
+$('body').append("<a href=" +myPlayList[0].mp3URL+">Play </a>" );
+$('body').append( "<img src=" + myPlayList[0].imageURL +">");
 
+$('body').append( myPlayList[1].title);
+$('body').append( myPlayList[1].artist);
+$('body').append("<a href=" +myPlayList[1].mp3URL+">Play </a>" );
+$('body').append( "<img src=" + myPlayList[1].imageURL +">");
   
+  $('body').append( myPlayList[2].title);
+$('body').append( myPlayList[2].artist);
+$('body').append("<a href=" +myPlayList[2].mp3URL+">Play </a>" );
+$('body').append( "<img src=" + myPlayList[2].imageURL +">");
 }
 
 function clearList(){
