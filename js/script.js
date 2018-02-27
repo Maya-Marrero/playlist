@@ -36,11 +36,11 @@ var myPlayList = [
 	{
 		"title":"One Time",
 		"artist":"Justin Beiber",
-		"mp3URL":"https://www.youtube.com/watch?v=8PTukbWkuZw",
+		"mp3URL":"https://cdn6.aptoide.com/imgs/1/e/9/1e9b8158b9df5df23875fdb3f52083bd_icon.png?w=256",
 		"imageURL":"https://vignette.wikia.nocookie.net/justin-bieber/images/4/41/Thumbnail.jpg/revision/latest?cb=20120506173934",
 	},
 	{
-		"title":"Baby",
+	"title":"Baby",
 	"artist":"Justin Bieber",
 	"mp3URL":"https://www.youtube.com/watch?v=kffacxfA7G4",
 	"imageURL":"https://vignette.wikia.nocookie.net/justin-bieber/images/4/41/Thumbnail.jpg/revision/latest?cb=20120506173934",
@@ -60,26 +60,16 @@ $( document ).ready(function() {
 });
 
 function displayList(){
-$('body').append("<p>Title: " + mySong.title+ "</p>");
-$('body').append("<p>Artist: " + mySong.artist + "</p>");
-$('body').append( "<a href=" + mySong.mp3URL+">Play </a>");
-$('body').append( "<img src=" + mySong.imageURL +">");
 
-$('body').append( myPlayList[0].title);
-$('body').append( myPlayList[0].artist);
-$('body').append("<a href=" +myPlayList[0].mp3URL+">Play </a>" );
-$('body').append( "<img src=" + myPlayList[0].imageURL +">");
-
-$('body').append( myPlayList[1].title);
-$('body').append( myPlayList[1].artist);
-$('body').append("<a href=" +myPlayList[1].mp3URL+">Play </a>" );
-$('body').append( "<img src=" + myPlayList[1].imageURL +">");
-  
-  $('body').append( myPlayList[2].title);
-$('body').append( myPlayList[2].artist);
-$('body').append("<a href=" +myPlayList[2].mp3URL+">Play </a>" );
-$('body').append( "<img src=" + myPlayList[2].imageURL +">");
+for (var i=0; i< myPlayList.length; i= i + 1){
+$('.songs').append( "<img src=" + myPlayList[i].imageURL +">");
+$('.songs').append("<p>Title: "+ myPlayList[i].title)+"</p>";
+$('.songs').append("<p>Artist: "+ myPlayList[i].artist)+"</p>";
+$('.songs').append("<p>"+"<a href=" +myPlayList[i].mp3URL+">Play </a>"+ "</p>" );
 }
+
+}
+
 
 function clearList(){
   
